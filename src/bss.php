@@ -5,31 +5,58 @@
 //Suma
 //Se ingresa dos cadenas binarias, se suman y se retorna el resultado
 function suma($cadena1, $cadena2){
-$resto = false;
-$resultado = '';
-$longitud = max(strlen($cadena1),strlen($cadena2));
-echo("echo longitud = "+$longitud);
-
-for($a = ($longitud-1); $a>=0; $a--){
-    if($resto = false){
-       if(($cadena1[$a] + $cadena2[$a]) == 2 || ($cadena1[$a] + $cadena2[$a]) == 0){
-            if(($cadena1[$a] + $cadena2[$a]) == 2) $resto = true;
-            $resultado = $resultado + 0;
-            echo("echo resultado if = "+$resultado);
-        }else{
-            $resultado = $resultado + 1;
-            echo("echo resultado else = "+$resultado);
+    $resto = 0;
+    $resultado = '';
+    
+    $longitud = max(strlen($cadena1),strlen($cadena2));
+    
+    $cadena1= str_pad($cadena1, $longitud, "0", STR_PAD_LEFT);
+    $cadena2= str_pad($cadena2, $longitud, "0", STR_PAD_LEFT);
+    echo("\ncadena1 = ".$cadena1);
+    echo("\ncadena2 = ".$cadena2);
+    
+    for($a = ($longitud-1); $a>=0; $a--){
+        echo("\na = ".$a);
+    
+        $sumaPosicion =intval($cadena1[$a]) + intval($cadena2[$a])+ $resto;
+        echo("\nsumaPosicion = ".$sumaPosicion);
+        echo("\nresto = ".$resto);
+    
+    
+            switch ($sumaPosicion) {
+                case 0:
+                    $resultado =  "0".$resultado;
+                    $resto= 0;
+                    break;
+                case 1:
+                    $resultado =  "1".$resultado;
+                    $resto= 0;
+                    break;
+                case 2:
+                    $resultado =  "0".$resultado;
+                    $resto= 1;
+                    break;
+                case 3:
+                    $resultado =  "1".$resultado;
+                    $resto= 1;
+                    break;
+    
+    
         }
-    }else{
-        if(($cadena1[$a]+1) == 2) $cadena1[$a] = 0; else $resto = false;
-        $resultado = $resultado + ($cadena1[$a]+$cadena2[$a]);
+    
     }
-}
-
-echo("echo resultado final return = "+$resultado);
-return strrev($resultado);
-
-}
+    $resultado =  ($resto>0?"1":"").$resultado;
+    
+    echo("\nresultado = ".$resultado);
+    
+    echo("\necho resultado final return = ".$resultado);
+    return strrev($resultado);
+    
+    }
+    
+    $cadena1="1111";
+    $cadena2="1111";
+    suma($cadena1,$cadena2);
 
 //Resta
 //Se ingresan dos cadenas binarias, se restan y se retorna el resultado
