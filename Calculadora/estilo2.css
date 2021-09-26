@@ -1,0 +1,45 @@
+body{
+    background-color: rgba(143, 143, 143, 0.945);
+}
+ 
+.titulo{
+     text-align: center;
+     color: rgb(135, 20, 20);
+}
+ 
+p{
+     text-align: center;
+     color:#ffffff ;
+}
+
+a .text-info{
+    background-color: rgb(135, 20, 20);
+    text-align: center;
+    color: white;
+    height: 20%;
+    border-radius: 10%;
+}
+ 
+
+input{
+    
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    width: 30%;
+}  
+ 
+form{
+ border: 10px solid #BCBCBC;
+ text-align:center;
+ height: 100%;
+ background: linear-gradient(#eeeeee, #ffffff);
+    
+} 
+ 
+.boton{
+    cursor: pointer;
+    background-color: rgb(135, 20, 20);
+    color: white;
+    height: 50%;
+}
