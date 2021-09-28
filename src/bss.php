@@ -127,4 +127,21 @@ do{
 }while($resultado> 0);
     return strrev($cadena);
 }
+
+//Rango
+/* Limita el numero de caracteres  */
+function rango {
+    $ponerUnRango ="rango" ; 
+    $limite = $ponerUnRango;
+    $tamaño = strlen ($cadena);
+
+    if($tamaño <= $limite){
+        echo $cadena;
+
+    }
+    else{
+        $nuevotexto = trim (substr($cadena, 0, $limite)). "...";
+        echo $nuevotexto;
+    }
+}
 ?>
