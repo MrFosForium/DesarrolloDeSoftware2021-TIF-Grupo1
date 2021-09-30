@@ -129,19 +129,9 @@ do{
 }
 
 //Rango
-/* Limita el numero de caracteres  */
-function rango {
-    $ponerUnRango ="rango" ; 
-    $limite = $ponerUnRango;
-    $tamaño = strlen ($cadena);
+//Limita la cantidad de caracteres
 
-    if($tamaño <= $limite){
-        echo $cadena;
+function rango($limite,$cadena){
 
-    }
-    else{
-        $nuevotexto = trim (substr($cadena, 0, $limite)). "...";
-        echo $nuevotexto;
-    }
 }
 ?>
