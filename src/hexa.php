@@ -1,29 +1,47 @@
 
+<?php
 
-
-//Se ingresa una cadena binaria, se pasa a decimal y luego se retorna
-
-function hexa($cadena){
-$decimal = 0;
-$posicion = 0;
-$longitud = strlen($cadena);
-for ($i=($longitud-1);$i>=0;$i--){
-    $decimal += intval($cadena[$i]) * pow( $posicion, 16);
-    $posicion+=1;
+/*Le asigna el valor a cada letra para el hexa*/ 
+function letrasANros(){
+    $lasLetras = [ 
+    "a"=>"10", "b"=>"11",
+    "c"=>"12", "d"=>"13", 
+    "e"=>"14", "f"=>"15",
+    ];
+    
 }
-return $decimal;
+function traductor($decimal){
+    $resultado ="";
+
+    if($decimal<10){
+        $resultado = $decimal;  
+    }else{
+        $resultado = letrasANros($decimal); 
+        
+    }
+    return $resultado ;
+    
 }
 
-//Se ingresa un decimal, se pasa a binario sin signo y luego se retorna 
+function hexa ($cadena){
 
-function representacion($decimal){
-$cadena = '';
-$resultado = $decimal;
-do{
-    $cadena.=fmod($resultado,2);
-    $resultado =floor($resultado /2);
-}while($resultado> 0);
-    return strrev($cadena);
+    $longitud = strlen($cadena);
+    echo("cantidad de caracteres es de".$longitud. " caracteres ");
+    $posicion = 0;
+    $decimal = 0;
+
+    for ($i=($longitud-1);$i>=0;$i--){
+        $decimal += intval($cadena[$i]) * pow(16 ,$posicion);
+        $posicion+=1;
+    }
+    traductor($decimal);
+    echo("El decimal es ". $decimal);
 }
+    
+
+hexa("10110");
+
+
 
 ?>
+
