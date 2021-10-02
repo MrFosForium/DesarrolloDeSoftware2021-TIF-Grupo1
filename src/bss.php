@@ -131,7 +131,17 @@ do{
 //Rango
 //Limita la cantidad de caracteres
 
-function rango($limite,$cadena){
+function rango($rango){
+    $minMaxDecimal = array(0);
+    echo("\nminMaxDecimal tiene el valor minimo: ".$minMaxDecimal[0]);
+    $minMaxDecimal[1] = pow(2,$rango)-1;
+    echo("\nminMaxDecimal tiene el valor maximo: ".$minMaxDecimal[1]);
 
+    $minMaxBinario = array(str_pad("0", $rango, "0", STR_PAD_LEFT),str_pad("1", $rango, "1", STR_PAD_LEFT));
+    echo("\nminMaxBinario tiene de valor minimo: ".$minMaxBinario[0]);
+    echo("\nminMaxBinario tiene de valor maximo: ".$minMaxBinario[1]);
 }
+
+rango(5);
+
 ?>
