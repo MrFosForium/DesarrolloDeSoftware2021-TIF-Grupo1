@@ -5,6 +5,8 @@
 //Suma
 //Se ingresa dos cadenas binarias, se suman y se retorna el resultado
 function suma($cadena1, $cadena2){
+    echo("\ncadena1 antes de los 0 = ".$cadena1);
+    echo("\ncadena2 antes de los 0 = ".$cadena2);
     $resto = 0;
     $resultado = '';
     
@@ -47,9 +49,9 @@ function suma($cadena1, $cadena2){
     }
     $resultado =  ($resto>0?"1":"").$resultado;
     
-    echo("\nresultado = ".$resultado);
+    echo("\nResultado = ".$resultado);
     
-    echo("\necho resultado final return = ".$resultado);
+    echo("\nResultado final return = ".$resultado);
     return strrev($resultado);
     
 }
@@ -57,6 +59,8 @@ function suma($cadena1, $cadena2){
 //Resta
 //Se ingresan dos cadenas binarias, se restan y se retorna el resultado
 function resta($cadena1,$cadena2){
+    echo("\ncadena1 antes de los 0 = ".$cadena1);
+    echo("\ncadena2 antes de los 0 = ".$cadena2);
     $resto = 0;
     $resultado = '';
     $longitud = max(strlen($cadena1),strlen($cadena2));
@@ -103,8 +107,9 @@ function resta($cadena1,$cadena2){
 
 }
 
-resta(1010011,1101);
+//resta(1010011,1101);
 
+//Interpretacion
 //Se ingresa una cadena binaria, se pasa a decimal y luego se retorna
 function interpretacion($cadena){
 $decimal = 0;
@@ -117,6 +122,7 @@ for ($i=($longitud-1);$i>=0;$i--){
 return $decimal;
 }
 
+//Representacion
 //Se ingresa un decimal, se pasa a binario sin signo y luego se retorna 
 function representacion($decimal){
 $cadena = '';
@@ -142,6 +148,6 @@ function rango($rango){
     echo("\nminMaxBinario tiene de valor maximo: ".$minMaxBinario[1]);
 }
 
-rango(5);
+//rango(5);
 
 ?>

@@ -1,30 +1,5 @@
 <?php
-//Interpretacion BSS
-//Se ingresa una cadena binaria, se pasa a decimal y luego se retorna
-function interpretacion($cadena){
-$decimal = 0;
-$posicion = 0;
-$longitud = strlen($cadena);
-for ($i=($longitud-1);$i>=0;$i--){
-    $decimal += intval($cadena[$i]) * pow(2 ,$posicion);
-    $posicion+=1;
-}
-return $decimal;
-}
-
-//Representacion BSS
-//Se ingresa un decimal, se pasa a binario sin signo y luego se retorna 
-function representacion($decimal){
-$cadena = '';
-$resultado = $decimal;
-do{
-    $cadena.=fmod($resultado,2);
-    $resultado =floor($resultado /2);
-}while($resultado> 0);
-    return strrev($cadena);    
-}   
-
-echo("Resultado".representacion(1000));
+include 'bss.php';
 
 //Interpretacion SM
 //se ingreso una cadena, saca su signo, calcula y retorna
@@ -35,7 +10,7 @@ $signo= substr($cadena,0,1);
 $cadena= substr($cadena,1,$longitud);
 $resultado=interpretacion($cadena);
 $resultado=ponerSigno($signo,$resultado);
-echo("interpretacion".$resultado);
+echo("\nInterpretacion ".$resultado);
 }
 
 function ponerSigno($signo,$resultado){
@@ -66,6 +41,30 @@ function representacionSM($decimal){
     }
 }
 
-representacionSM(-5);
+//representacionSM(-5);
+
+//Suma SM
+//INCOMPLETO TERMINAR
+function sumaSM($cadena1,$cadena2){
+
+    if($cadena1[0] == $cadena2[0]){
+        echo("\nLos Signos son iguales :)");
+        $signo = $cadena1[0];
+        echo("\nEl signo es: ".$signo);
+
+        $cadena1 = substr($cadena1,1,strlen($cadena1));
+        echo("\nLa cadena 1 quedo asi: ".$cadena1);
+        $cadena2 = substr($cadena2,1,strlen($cadena2));
+        echo("\nLa cadena 2 quedo asi: ".$cadena2);
+        $cadenaFinal = suma($cadena1,$cadena2);
+        echo("\nLa cadenaFinal es: ".$cadenaFinal);
+        $longitud = strlen($cadenaFinal);
+        echo("\nLa longitud es: ".$longitud);
+        $cadenaFinal = str_pad($cadenaFinal, ($longitud+1), $signo, STR_PAD_LEFT);
+        echo("\nEl resultado final es: ".$cadenaFinal);
+    }
+}
+
+sumaSM("101001","111010");
 
 ?>
