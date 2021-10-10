@@ -44,7 +44,6 @@ function representacionSM($decimal){
 //representacionSM(-5);
 
 //Suma SM
-//INCOMPLETO TERMINAR
 function sumaSM($cadena1,$cadena2){
 
     if($cadena1[0] == $cadena2[0]){
@@ -62,9 +61,53 @@ function sumaSM($cadena1,$cadena2){
         echo("\nLa longitud es: ".$longitud);
         $cadenaFinal = str_pad($cadenaFinal, ($longitud+1), $signo, STR_PAD_LEFT);
         echo("\nEl resultado final es: ".$cadenaFinal);
+    }else{
+        $signoCadena1 = substr($cadena1,0,1);
+        echo("\nEl signo de la cadena1 es: ".$signoCadena1);
+        $signoCadena2 = substr($cadena2,0,1);
+        echo("\nEl signo de la cadena2 es: ".$signoCadena2);
+        
+        if(interpretacion($cadena1)>=interpretacion($cadena2)){
+            echo("\nLa cadena 1 es mayor a la cadena 2");
+            $cadenaFinal = resta($cadena1,$cadena2);
+            echo("\nLa cadena final vale: ".$cadenaFinal);
+            $cadenaFinal = str_pad($cadenaFinal, strlen($cadenaFinal)+1, $signoCadena1, STR_PAD_LEFT);
+            echo("\nCadena final con el signo: ".$cadenaFinal);
+        }else{
+            echo("\nLa cadena 2 es mayor a la cadena 1");
+            $cadenaFinal = resta($cadena2,$cadena1);
+            echo("\nLa cadena final vale: ".$cadenaFinal);
+            $cadenaFinal = str_pad($cadenaFinal, strlen($cadenaFinal)+1, $signoCadena2, STR_PAD_LEFT);
+            echo("\nCadena final con el signo: ".$cadenaFinal);
+        }
     }
 }
 
-sumaSM("101001","111010");
+//sumaSM("001001","111010");
+
+//Resta SM
+function restaSM($cadena1,$cadena2){
+    $signo = substr($cadena2,0,1);
+    echo("\nEl signo es: ".$signo);
+    if($signo>0) $signo = 0; else $signo = 1;
+    echo("\nEl signo despues es: ".$signo);
+    $cadena2[0] = $signo;
+    echo("\nLa cadena 2 quedo: ".$cadena2);
+    $resultado = sumaSM($cadena1,$cadena2);
+    echo("\nEl resultado es: ".$resultado);
+    return $resultado;
+};
+
+//Rango SM
+function rangoSM($rango){
+    $minMaxBinarioSM = array(str_pad("1", $rango, "1", STR_PAD_RIGHT),str_pad("0", $rango, "1", STR_PAD_RIGHT));
+    //Para sacar el negativo tengo que usar esta formula −(2n−1 − 1)
+    //Para sacar el positivo tengo que usar esta formula 2n−1 − 1
+    $minMaxDecimalSM = array(-(pow(2,$rango-1)-1),pow(2,$rango-1)-1);
+    echo("\nBinario [".$minMaxBinarioSM[0].",".$minMaxBinarioSM[1]."]");
+    echo("\nDecimal [".$minMaxDecimalSM[0].",".$minMaxDecimalSM[1]."]");
+}
+
+rangoSM(3);
 
 ?>
