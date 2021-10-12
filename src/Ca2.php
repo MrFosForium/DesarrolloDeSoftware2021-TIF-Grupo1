@@ -28,8 +28,38 @@ else {
 return $resultado;
 }
 
-echo(interpretarCa2('0110'));
-function complemento2($cadena){
-    interpretarCa2($cadena);
+//echo(interpretarCa2('0110'));
+
+
+//--------------------------------------------------------------------------------------------------
+function complementacion($cadena){
+$longitud = strlen($cadena);
+    for ($i=($longitud-1);$i>=0;$i--){
+        if($cadena[$i]=='1'){
+            $cadena[$i]='0';
+        }
+        else {
+        $cadena[$i]='1'; }
+    } 
+    return $cadena;
 }
+
+function complementar2($cadena){
+    $resultadoFinal= "";
+    $resultado=complementacion($cadena);
+    $resultado = suma($cadena, 1); 
+    $resultadoFinal=representacion($resultado);
+    return $resultadoFinal;
+}
+
+function representarCa2($decimal){
+$resultado= representacion($decimal);
+    if ($decimal<0){
+         $resultado=complementar2($resultado);
+    }
+    return $resultado;
+}
+
+echo(representarCa2(6));
+//--------------------------------------------------------------------------------------------------
 ?>
