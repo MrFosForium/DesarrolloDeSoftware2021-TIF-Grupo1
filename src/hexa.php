@@ -1,6 +1,6 @@
 <?php
 include 'bss.php';
-
+Class hexa{
 /*Le asigna el valor a cada letra para el hexa*/ 
 function traducirhexabin($decimal){
     switch($decimal){
@@ -144,9 +144,7 @@ foreach ($pedazos as $pedazo) {
 }
   return $hexa;  
 }
-    echo representacionhexa(99);
+    
 
-
-
-
+}
 ?>
