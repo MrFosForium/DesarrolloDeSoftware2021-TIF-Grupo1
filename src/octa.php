@@ -1,4 +1,6 @@
 <?php
+class Octa{
+
 //se ingresa una cadena y se pasa a decimal
 function octaInterpretacion ($cadena){
 
@@ -30,8 +32,6 @@ function octaRepresentacion($decimal){
         echo("\nel octa es ".$cadena);
     }
 
- 
-    octaInterpretacion("1711");   
-    octaRepresentacion("1000");
-
+} 
+    
 ?>
