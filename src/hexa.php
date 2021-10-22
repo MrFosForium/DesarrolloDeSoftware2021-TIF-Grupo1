@@ -1,5 +1,6 @@
 <?php
 include 'bss.php';
+
 /*Le asigna el valor a cada letra para el hexa*/ 
 function traducirhexabin($decimal){
     switch($decimal){
@@ -59,17 +60,21 @@ return $cadena;
 
 
 function traducirBinHexa($cadena){
+    $decimal ="";
     switch($cadena){
+        case '0000' :
+            $decimal = '0';
+            break;
         case '0001' :
             $decimal = '1';
-            break;
+                break;
         case '0010' :
             $decimal = '2';
              break;
         case '0011' :
             $decimal = '3';
             break;     
-        case '0011' :
+        case '0100' :
             $decimal = '4';
                break;
         case '0101' :
@@ -89,21 +94,22 @@ function traducirBinHexa($cadena){
                      break;    
         case '1010' :
             $decimal = 'A';
+            
             break;
         case '1011':
             $decimal = 'B';
             break;
-        case 'C':
-            $decimal = '1100';
+        case '1100':
+            $decimal = 'C';
             break;
-        case 'D':
-            $decimal = '1101';
+        case '1101':
+            $decimal = 'D';
             break;
-        case 'E':
-            $decimal = '1110';
+        case '1110':
+            $decimal = 'E';
             break;
-        case 'F':
-            $decimal = '1111';
+        case '1111':
+            $decimal = 'F';
         break;
 }
 
@@ -111,7 +117,7 @@ return $decimal;
 
 }
 
-
+//Pasa la cadena a Binario
 function interpretar($cadena){
   
     $binario = "";
@@ -124,61 +130,21 @@ function interpretar($cadena){
 }
 // echo interpretar("AA");
 
-
+// Agarra el decimal,lo pasa a BSS  agarra bloques de 4 y los pasa a hexa
 function representacionhexa($decimal){
- $cadenaSS = representacion($decimal);
-// echo "bss del decimal". $cadenaSS ;
+ $cadenaBSS = representacion($decimal);
 $hexa  =""; 
-$longitud=strlen($cadenaSS);
-for ($i=0;$i<$longitud;$i++){
-    return $hexa .= traducirBinHexa($cadenaSS[$i]); 
-    
+$longitud=strlen($cadenaBSS);
+if ($longitud % 4!=0){
+    $cadenaBSS=str_pad($cadenaBSS, $longitud+ (4-$longitud % 4), "0", STR_PAD_LEFT);
 }
-    
-    }
-    echo representacionhexa(10);
-
-
-
-/*function representar($decimal){
-$valor = "";
-$longitud = strlen($decimal);
-for ($i=0;$i<$longitud;$i++){ 
-    $valor = traducirBinHexa($decimal); 
+$pedazos = str_split($cadenaBSS,4);
+foreach ($pedazos as $pedazo) {
+    $hexa .= traducirBinHexa($pedazo); 
 }
- return representacion($valor);
+  return $hexa;  
 }
-
-echo representar("0001");
-
-/*
-function hexareinter($cadena){
-
-    $longitud = strlen($cadena);
- //   echo("cantidad de caracteres es de".$losngitud. " caracteres ");
-    $posicion = 0;
-    $decimal = 0;
-
-    
-
-    for ($i=($longitud-1);$i>=0;$i--){
-
-        if(detectar($cadena[$i]));{
-            interConLetras($cadena);
-        }
-        
-        $decimal += intval($cadena[$i]) * pow(16 ,$posicion);
-        $posicion+=1;
-        }
-    
-}
-    echo("El decimal es ".$decimal);
-}
-
-    
-*/
-
- 
+    echo representacionhexa(99);
 
 
 
