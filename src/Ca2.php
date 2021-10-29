@@ -1,5 +1,8 @@
 <?php
+
+
 include 'bss.php';
+Class hexa{
 function complementar($cadena){
     $resultadoFinal=0;
     $resultado=' ' ;
@@ -62,4 +65,5 @@ $resultado= representacion($decimal);
 
 echo(representarCa2(6));
 //--------------------------------------------------------------------------------------------------
+}
 ?>
