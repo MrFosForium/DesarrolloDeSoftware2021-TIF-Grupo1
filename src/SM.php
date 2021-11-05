@@ -87,7 +87,7 @@ function sumaSM($cadena1,$cadena2){
 
 //sumaSM("001001","111010");
 
-//Resta SM
+//Resta SM //Primero pasa las cadenas por suma yluego por resta segun maxi jsjs
 function restaSM($cadena1,$cadena2){
     $signo = substr($cadena2,0,1);
     echo("\nEl signo es: ".$signo);
