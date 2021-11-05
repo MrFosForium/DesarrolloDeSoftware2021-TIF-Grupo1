@@ -1,0 +1,428 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'lato';
+    font-size: 16px;
+    background: #fff;
+}
+
+
+@keyframes tipsy {
+    0% {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+}
+  
+  body {
+    font-family: helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+    color: #fffbf1;
+    text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+    font-size: 90px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -3px;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+  }
+  
+  h1:before,
+  h1:after {
+    content: '';
+    padding: .9em .4em;
+    position: absolute;
+    left: 50%;
+    width: 110%;
+    height: 20%;
+    top: 50%;
+    display: block;
+    border: 10px solid red;
+  }
+  
+  h1:before {
+    border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  h1:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+    box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menus{
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header{
+
+    background: #8e9eab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e9eaba3, #eef2f395); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e9eaba1, #eef2f391), url(eset.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header .menu a{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+header .menu a:hover{
+    text-decoration: underline;
+}
+
+header .texto-principal{
+    margin: 15px 0;
+    text-align: center;
+    font-size: 50px;
+    font-family:cursive;
+    color: #131313;
+    margin-bottom: 5px;
+}
+
+header .texto-principal .linea{
+   width: 600px;
+   margin: auto;
+   height: 3px;
+   background: rgb(14, 42, 135);
+}
+
+main .inf{
+    background: #f0f3f5;
+    padding: 30px 0;
+    text-align: center;
+}
+
+main .inf .info h2{
+    font-size: 50px;
+    font-weight: 900;
+    color: #151515;
+    margin-bottom: 20px;
+}
+
+main .inf .info{
+    font-size: 50px;
+    font-weight: 900;
+    color: #999999;
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.subtitulo{
+   font-size: 70px;
+   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form {
+    border: 2px solid #6d6d6d;
+    text-align:center;
+    background: linear-gradient(#eeeeee, #ffffff);
+    
+    width: 100%;
+    height: 100%;
+    padding: 50px 30px;
+    
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    box-sizing: border-box;
+}
+
+
+.form select {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color: #000000;
+    text-align: center;
+
+    width: 50%;
+    height: 30px;
+    
+    margin-bottom: 30px;
+    
+    box-sizing: border-box;
+    
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.form .login-input {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color: #45b828;
+    text-align: center;
+
+    width: 50%;
+    height: 30px;
+    
+    margin-bottom: 30px;
+    
+    box-sizing: border-box;
+    
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.form .login-input2{
+    color: #45b828;
+    text-align: center;
+    width: 10%;
+    height: 40px;
+    
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    
+    box-sizing: border-box;
+    
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+
+}
+
+.input::placeholder {
+    font-family: 'Overpass', sans-serif;
+    color: #000000;
+}
+
+.boton {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color:#ffffff;
+    width: 100%;
+    height: 40px;
+    border: none;
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    background-color: #2b2b2c;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.boton:hover {
+    background-color: #880202;
+    color:#000000;
+}
+
+.pie-form {
+    font-size: 90%;
+    text-align: center;    
+    margin-top: 15px;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Creditos */
+
+
+.creditos{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.creditos figure{
+  
+  position: relative;
+  height: 60%;
+  width: 60%;
+  cursor: pointer;
+}
+
+.creditos figure img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+.creditos figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 37, 37, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0; 
+    visibility: hidden;
+}
+
+.creditos figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.creditos figure:hover > .capa h3{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.creditos figure .capa h3{
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin-bottom: 120ox;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.creditos figure .capa p{
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    width: 90%;
+}
+
+.creditos figure .capa .docente{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+}
+
+.creditos figure .capa .docente p{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+}
