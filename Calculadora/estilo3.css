@@ -117,20 +117,6 @@ main .inf .info{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 /*Titulos123....*/
   
@@ -172,25 +158,15 @@ main .inf .info{
 }
 
 .bocadillo-cuadrado {
-  position: relative;
   left: 20%;
   color: white;
-  height: 400px;
-  width: 800px;
+  height: 100%;
+  width: 100%;
   background: rgb(168, 168, 168);
   box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
-.bocadillo-cuadrado:before {
-  border: 20px solid rgb(168, 168, 168);
-  content: '';
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  position: absolute;
-  bottom: -48px;
-  left: calc(50% - 45px)
-}
+
 
 /*Tabla de usuarios*/
 
@@ -269,24 +245,6 @@ main{
   opacity:1;
   pointer-events:auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -464,10 +422,3 @@ footer{
     margin: 5px 0;
   }
 }
-
-
-
-
-
-
-
