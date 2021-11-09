@@ -7,4 +7,13 @@ function representacionEX($entero,$caracteres,$exceso){
     representacion($resultado);
     echo("\nLa representacion es: ".representacion($resultado));
 }
+
+function interpretacionEx($laCadena){
+    $nBits = strlen($laCadena);
+    $elDecimal =  interpretacion($laCadena) -$nBits ;
+    echo "el resultado de la cadena es".$elDecimal;
+
+};
+interpretacionEx("111")
+
 ?>
