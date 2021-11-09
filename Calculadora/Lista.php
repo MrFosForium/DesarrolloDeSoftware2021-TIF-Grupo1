@@ -33,16 +33,7 @@
        </div>
  </header>
 
-
-   <div class="bocadillo-cuadrado">
-      <h1 class="titulo">Bienvenid@s</h1>
-      <h1>Los estudiantes de la orientacion programacion de la Escuela Secundaria de Educacion Tecnica de la U.N.Q<br>  
-         Realizaron una Calculadora y un sistema de listado de los usuarios registrados.<br><br>
-         Te permite agregar nuevos usuarios como tambien poder modificar y eleminar los usuarios existentes.</h1> 
-   </div>
-
    <img class="persona" src="persona.jpg">
-
   
     <a href="#miModal">
       <img src="Logo.png"></img>
@@ -127,5 +118,12 @@
        ?>
       </table>
     </main>
+
+    <div class="bocadillo-cuadrado">
+      <h1>Los estudiantes de la orientacion programacion de la Escuela Secundaria de Educacion Tecnica de la U.N.Q<br>  
+         Realizaron una Calculadora y un sistema de listado de los usuarios registrados.<br><br>
+         Te permite agregar nuevos usuarios como tambien poder modificar y eleminar los usuarios existentes.</h1> 
+   </div>
+
   </body>
 </html>
