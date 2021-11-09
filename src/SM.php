@@ -1,6 +1,7 @@
 <?php
 include 'bss.php';
 
+class SM extends BSS{
 //Interpretacion SM
 //se ingreso una cadena, saca su signo, calcula y retorna
 function interpretacionSM($cadena){
@@ -40,8 +41,6 @@ function representacionSM($decimal){
         return(representacion($decimal));
     }
 }
-
-representacionSM(-5);
 
 //representacionSM(-5);
 
@@ -110,6 +109,9 @@ function rangoSM($rango){
     echo("\nDecimal [".$minMaxDecimalSM[0].",".$minMaxDecimalSM[1]."]");
 }
 
+}
+
+representacionSM(-5);
 rangoSM(3);
 
 ?>

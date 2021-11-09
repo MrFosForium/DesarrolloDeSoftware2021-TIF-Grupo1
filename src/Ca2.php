@@ -1,8 +1,7 @@
 <?php
-
-
 include 'bss.php';
-Class hexa{
+
+class CA2 extends BSS{
 function complementar($cadena){
     $resultadoFinal=0;
     $resultado=' ' ;

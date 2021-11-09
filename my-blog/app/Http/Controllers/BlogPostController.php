@@ -41,11 +41,9 @@ class BlogPostController extends Controller
     }
 
     
-    public function edit(BlogPost $blogPost)
+    public function registro()
     {
-        return view('blog.edit', [
-            'post' => $blogPost,
-        ]); //returns the edit view with the post
+        return view('blog/registro');
     }
 
     

@@ -16,7 +16,7 @@
         }
 
     }else{
-        echo'<script>
+        echo '<script language="javascript">
         alert("Los datos implementado es incorrecto.");
         window.location.href="sesion.html";
         </script>';

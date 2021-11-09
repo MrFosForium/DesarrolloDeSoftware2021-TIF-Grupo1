@@ -1,7 +1,7 @@
 <?php
 
-//BSS
 
+class BSS {
 //Suma
 //Se ingresa dos cadenas binarias, se suman y se retorna el resultado
 function suma($cadena1, $cadena2){
@@ -149,5 +149,6 @@ function rango($rango){
 }
 
 //rango(5);
+}
 
 ?>

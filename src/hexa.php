@@ -1,6 +1,6 @@
 <?php
 include 'bss.php';
-Class hexa{
+class hexa{
 /*Le asigna el valor a cada letra para el hexa*/ 
 function traducirhexabin($decimal){
     switch($decimal){
