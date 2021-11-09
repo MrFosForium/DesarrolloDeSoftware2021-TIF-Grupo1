@@ -27,9 +27,9 @@
                   </nav>";
                    
                 ?>
-            <div class="texto-principal">               
-               <h1 href="http://www.thismanslife.co.uk" target="_blank">Calculadora Aritmetica</h1>
-            </div>
+                <div class="container">
+                  <p class="text">Calculadora Arimetica</p>
+                </div>
        </div>
     </header>
 
@@ -82,7 +82,7 @@
             <img src="1.png" alt="">
             <div class="capa">
                <h3>Francisco Castellanos</h3>
-               <p>Se encargo sobre la identidad visual, grafico del sistema y tambien el almacenamiento de datos.</p>
+               <p>Se encargo sobre el grafico del sistema y tambien el almacenamiento de datos.</p>
             </div>
          </figure>
        
@@ -98,7 +98,7 @@
             <img src="3.png" alt="">
             <div class="capa">
                <h3>Emiliano Dominguez</h3>
-               <p>Se dedico a realizar tanto los sistemas numericos como tambien en el desarollo de Laravel.</p>
+               <p>Realizo tanto los sistemas numericos como tambien en el desarollo de Laravel.</p>
             </div>
          </figure>
        
@@ -106,7 +106,7 @@
              <img src="4.png" alt="">
               <div class="capa">
                 <h3>Luciano Azzaro</h3>
-                <p>Realizo un conjunto de sistema numericos, representación e interpelación.</p>
+                <p>Realizo un conjunto de sistema numericos, representación e interpelación y los diagramas.</p>
              </div>
           </figure>
        
