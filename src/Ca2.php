@@ -1,7 +1,11 @@
 <?php
 include 'bss.php';
+<<<<<<< HEAD
 
 class CA2 extends BSS{
+=======
+Class Ca2{
+>>>>>>> c14c384c4c76ebad96241ce5ebfb7b672e848a74
 function complementar($cadena){
     $resultadoFinal=0;
     $resultado=' ' ;
