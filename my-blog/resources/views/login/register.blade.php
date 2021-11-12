@@ -1,7 +1,15 @@
-@extends('layouts.app')
-@section('content')
+<html lang="es">
+    
+   <head>        
+    <meta charset="utf-8">
+    <title> Registrar</title> 
+    <link rel="stylesheet" href="<?php echo asset('css/app.css')?>" type="text/css">    
 
-    <div id="contenedor">
+   </head>
+
+   <body>
+      <img class="logo" src="<?php echo asset('img/Logo.png')?>">
+     <div id="contenedor">
         <div id="central">
             <div id="login">
                <div class="titulo">
@@ -25,11 +33,12 @@
               </form>
                     
                <div class="pie-form">
-                  <a href="sesion.html">¿Ya tienes Cuenta? Ingresa aqui</a>
+                  <a href="/login/login">¿Ya tienes Cuenta? Ingresa aqui</a>
                </div>
                 
             </div>
          </div>
       </div>
-
-@endsection
+            
+    </body>
+</html>
