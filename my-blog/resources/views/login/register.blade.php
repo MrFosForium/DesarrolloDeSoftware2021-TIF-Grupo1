@@ -16,20 +16,22 @@
                  Registrate!
                </div>
 
-               <form action="0registrar.php" method="post" id="loginform">
-                  <input type="text" class="login-input" name="nombre" placeholder="Ingresa tu nombre" required/><br>
-                  <input type="text" class="login-input" name="apellidos" placeholder="Ingresa tu apellido" required/><br>
-                  <input type="text" class="login-input" name="escuela" placeholder="Ingresa tu Escuela" required/><br>
-                  <input type="email" class="login-input" name="correo" placeholder="Ingresa tu correo" required><br>
-                  <input type="password" class="login-input" name="clave" placeholder="Ingresa tu clave" maxlength="10" required><br>
+               <form action="/login/login" method="POST" id="loginform">
+                  @csrf
+                  @method('PUT')
+                  <input type="text" class="login-input" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required/><br>
+                  <input type="text" class="login-input" id="apellidos" name="apellidos" placeholder="Ingresa tu apellido" required/><br>
+                  <input type="text" class="login-input" id="escuela" name="escuela" placeholder="Ingresa tu Escuela" required/><br>
+                  <input type="email" class="login-input" id="correo" name="correo" placeholder="Ingresa tu correo" required><br>
+                  <input type="password" class="login-input" id="clave" name="clave" placeholder="Ingresa tu clave" maxlength="10" required><br>
                   
-                  <select name="rol">
+                  <select id="rol" name="rol">
                    <option value="" selected="selected"> selecciona el tipo de ingreso </option>
                    <option value="docente">Docente</option>
                    <option value="alumno">Alumno</option>
                  </select><br>
 
-                <button name="submit" value="Enviar" class="login-button" type="submit" title="Ingresar">Enviar</button>
+                <button class="login-button" type="submit">Enviar</button>
               </form>
                     
                <div class="pie-form">

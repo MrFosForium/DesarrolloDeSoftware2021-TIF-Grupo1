@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 Route::get('/categorias', 'App\Http\Controllers\CalculadoraController@index');
-route::get('/login/register', 'App\Http\Controllers\CalculadoraController@register');
+route::post('/login/register', 'App\Http\Controllers\CalculadoraController@register');
 route::get('/login/login', 'App\Http\Controllers\CalculadoraController@login');
