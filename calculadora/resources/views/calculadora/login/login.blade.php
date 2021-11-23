@@ -15,7 +15,7 @@
                     </form>
 
                     <div class="pie-form">
-                        <a href="/create">¿No tienes Cuenta? Registrate</a>
+                        <a href="/register">¿No tienes Cuenta? Registrate</a>
                     </div>
                 </div>
             </div>

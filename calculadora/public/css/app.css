@@ -5,6 +5,8 @@ body {
     color: #2c1e1b;
     
     margin: 0;
+    background-image: url('../img/eset.jpg');
+    background-position: center;
     background-color: #550707;
 }
 

@@ -15,6 +15,7 @@ class RegistroCalculosController extends Controller
     {
         return view('calculadora.login.register');
     }
+    
     /**
      * Display a listing of the resource.
      *
@@ -54,7 +55,7 @@ class RegistroCalculosController extends Controller
         $registros->Resultado = $request->get('Resultado');
         $registros->save();
 
-        return redirect()->route('index');
+        return redirect()->route('calculadora.index');
     }
 
     /**

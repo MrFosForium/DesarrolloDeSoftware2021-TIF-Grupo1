@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('calculadora.login.login');
 });
-*/
 
 Route::get('login', 'App\Http\Controllers\RegistroCalculosController@login');
 Route::get('register', 'App\Http\Controllers\RegistroCalculosController@register');
 Route::get('index', 'App\Http\Controllers\RegistroCalculosController@index');
 Route::get('create', 'App\Http\Controllers\RegistroCalculosController@create');
-Route::get('store', 'App\Http\Controllers\RegistroCalculosController@store');
+Route::post('store', 'App\Http\Controllers\RegistroCalculosController@store')->name("calc.store");
 
-Route::resource('/', 'App\Http\Controllers\RegistroCalculosController');
+Route::resource('/calculadora', 'App\Http\Controllers\RegistroCalculosController');

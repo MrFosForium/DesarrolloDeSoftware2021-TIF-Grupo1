@@ -17,7 +17,7 @@
             <h3 style="font-size: 600%; line-height: 500%; color:rgb(0, 0, 0);  text-align: center;">Calculadora</h3>
 
 
-            <form action="{{route('store')}}" method="post"><br>
+            <form action="{{route('calc.store')}}" method="post"><br>
                 @csrf
                <select id="Sistema_Numerico" name="Sistema_Numerico">
                  <option value="" selected="selected"> Sistema Numerico </option>
@@ -42,7 +42,7 @@
              <input type="text" class="login-input" id="Operando" name="Operando" placeholder="Ingresa el tipo de operando"/>
              <input type="text" class="login-input" id="Primer_Cadena" name="Primer_Cadena" placeholder="Ingresa la primer cadena"/>
              <input type="text" class="login-input" id="Segunda_Cadena" name="Segunda_Cadena" placeholder="Ingresa la segunda cadena"/>
-             <input class="boton"  type="submit" name="submit" value="calcular" class="login-button"><br><br>
+             <input class="btn btn-primary" type="submit" name="submit"><br><br>
              <input style="background: rgb(123, 149, 182); color: black;" type="text" class="login-input" name="Resultado"/>
            </form><br>
 
