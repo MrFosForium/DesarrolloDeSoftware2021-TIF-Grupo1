@@ -8,10 +8,10 @@
                        Iniciar sesion
                     </div>
 
-                    <form action="sesion.php" method="post" id="loginform">
-                        <input type="text" class="login-input" name="nombre" placeholder="Ingresa tu nombre" required/>
-                        <input type="password" class="login-input" name="clave" placeholder="Ingresa tu clave" maxlength="10" required>
-                        <button name="submit" value="Enviar" class="login-button" type="submit" title="Ingresar">Enviar</button>
+                    <form action="{{route('create')}}" id="loginform">
+                        <input type="text" class="login-input" name="Correo" placeholder="Ingresa tu correo" required/>
+                        <input type="password" class="login-input" name="Clave" placeholder="Ingresa tu clave" maxlength="25" required>
+                        <button name="submit" value="Enviar" class="login-button" type="submit" title="Ingresar">Acceder</button>
                     </form>
 
                     <div class="pie-form">

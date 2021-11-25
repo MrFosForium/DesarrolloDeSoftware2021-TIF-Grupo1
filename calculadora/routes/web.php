@@ -17,10 +17,15 @@ Route::get('/', function () {
     return view('calculadora.login.login');
 });
 
-Route::get('login', 'App\Http\Controllers\RegistroCalculosController@login');
-Route::get('register', 'App\Http\Controllers\RegistroCalculosController@register');
+Route::get('login', function () {
+    return view('calculadora.login.login');
+});;
+Route::get('register', function(){
+    return view('calculadora.login.register');
+});
+Route::post('registerStore', 'App\Http\Controllers\RegistroCalculosController@registerStore')->name("user.store");
 Route::get('index', 'App\Http\Controllers\RegistroCalculosController@index');
-Route::get('create', 'App\Http\Controllers\RegistroCalculosController@create');
+Route::get('create', 'App\Http\Controllers\RegistroCalculosController@create')->name("create");
 Route::post('store', 'App\Http\Controllers\RegistroCalculosController@store')->name("calc.store");
 
 Route::resource('/calculadora', 'App\Http\Controllers\RegistroCalculosController');

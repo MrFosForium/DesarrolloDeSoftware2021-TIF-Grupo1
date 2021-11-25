@@ -4,16 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RegistroCalculos;
+use App\Models\Usuario;
 
 class RegistroCalculosController extends Controller
 {
-    public function login()
+    public function registerStore(Request $request)
     {
-        return view('calculadora.login.login');
+        $usuario = new Usuario();
+        $usuario->Nombre = $request->get('Nombre');
+        $usuario->Apellido = $request->get('Apellido');
+        $usuario->Escuela = $request->get('Escuela');
+        $usuario->Correo = $request->get('Correo');
+        $usuario->Clave = $request->get('Clave');
+        $usuario->save();
+
+        return redirect()->route('calculadora.create');
     }
-    public function register()
-    {
-        return view('calculadora.login.register');
+
+    public function loginData(){
+        return view('calculadora.create');
     }
     
     /**
