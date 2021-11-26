@@ -8,10 +8,15 @@
                        Iniciar sesion
                     </div>
 
-                    <form action="{{route('create')}}" id="loginform">
-                        <input type="text" class="login-input" name="Correo" placeholder="Ingresa tu correo" required/>
-                        <input type="password" class="login-input" name="Clave" placeholder="Ingresa tu clave" maxlength="25" required>
-                        <button name="submit" value="Enviar" class="login-button" type="submit" title="Ingresar">Acceder</button>
+                    <form action='{{route("login")}}' method='post'>
+                        @csrf
+                        <label>
+                            <input type="text" class="login-input" name="Correo" placeholder="Ingresa tu correo" required/>
+                        </label>
+                        <label>
+                            <input type="password" class="login-input" name="Clave" placeholder="Ingresa tu clave" maxlength="25" required>
+                        </label>
+                        <button class="login-button" type="submit">Acceder</button>
                     </form>
 
                     <div class="pie-form">

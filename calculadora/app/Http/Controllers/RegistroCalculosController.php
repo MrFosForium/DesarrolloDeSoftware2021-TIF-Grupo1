@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\RegistroCalculos;
 use App\Models\Usuario;
@@ -21,8 +22,14 @@ class RegistroCalculosController extends Controller
         return redirect()->route('calculadora.create');
     }
 
-    public function loginData(){
-        return view('calculadora.create');
+    public function login(Request $request){
+        $credentials = $request->only('Correo', 'Clave');
+
+        if (Auth::attempt($credentials)) {
+        return redirect()->route('calculadora.create');
+        }
+        
+        return 'No estas registrado';
     }
     
     /**
