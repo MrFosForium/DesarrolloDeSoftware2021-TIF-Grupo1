@@ -8,7 +8,7 @@
                        Iniciar sesion
                     </div>
 
-                    <form action='{{route("login")}}' method='post'>
+                    <form action='/create'>
                         @csrf
                         <label>
                             <input type="text" class="login-input" name="Correo" placeholder="Ingresa tu correo" required/>

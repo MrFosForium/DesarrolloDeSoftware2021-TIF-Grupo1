@@ -8,6 +8,9 @@ body{
     font-family: 'lato';
     font-size: 16px;
     background: #fff;
+
+    margin: 0;
+    background-color: #D1D1D1;
 }
 
 .container {
@@ -22,6 +25,35 @@ body{
     font-weight: 700;
     font: italic bold 100px Georgia, Serif;
     text-shadow: -4px 3px 0 #000000, -14px 7px 0 #0a0e27;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+}
+
+#login button {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color:#ffffff;
+    width: 100%;
+    height: 40px;
+    border: none;
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    background-color: #2b2b2c;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#login button:hover {
+    background-color: #ffffff;
+    color:#000000;
 }
   
   
@@ -165,7 +197,7 @@ main .inf .info{
 .form {
     border: 2px solid #6d6d6d;
     text-align:center;
-    background: linear-gradient(#eeeeee, #ffffff);
+    background: linear-gradient(#C4C4C4, #A2A2A2);
     
     width: 100%;
     height: 100%;
@@ -202,6 +234,10 @@ main .inf .info{
     -webkit-border-radius: 3px 3px 3px 3px;
 }
 
+.form .select-SN{
+    margin-left: 60px;
+}
+
 .form .login-input {
     font-family: 'Overpass', sans-serif;
     font-size: 110%;
@@ -224,11 +260,12 @@ main .inf .info{
 .form .login-input2{
     color: #45b828;
     text-align: center;
-    width: 10%;
+    width: 3%;
     height: 40px;
     
     margin-bottom: 10px;
     padding: 5px 5px 5px 10px;
+    margin-left: 10px;
     
     box-sizing: border-box;
     
@@ -281,108 +318,4 @@ main .inf .info{
 
 .pie-form a:hover {
     color: #000000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Creditos */
-
-
-.creditos{
-   display: flex;
-   justify-content: space-evenly;
-}
-
-.creditos figure{
-  
-  position: relative;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-}
-
-.creditos figure img{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    transition: all 500ms ease-out;
-}
-
-.creditos figure .capa{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(37, 37, 37, 0.7);
-    transition: all 500ms ease-out;
-    opacity: 0; 
-    visibility: hidden;
-}
-
-.creditos figure:hover > .capa{
-    opacity: 1;
-    visibility: visible;
-}
-
-.creditos figure:hover > .capa h3{
-    margin-top: 38px;
-    text-align: center;
-}
-
-.creditos figure .capa h3{
-    color: rgb(255, 255, 255);
-    font-weight: 400;
-    transition: all 500ms ease-out;
-}
-
-.creditos figure .capa p{
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-}
-
-.creditos figure .capa .docente{
-    color: #fff;
-    text-align: center;
-    font-size: 24px;
-    width: 100%;
-}
-
-.creditos figure .capa .docente h3{
-    color: #fff;
-    text-align: center;
-    font-size: 10%;
 }

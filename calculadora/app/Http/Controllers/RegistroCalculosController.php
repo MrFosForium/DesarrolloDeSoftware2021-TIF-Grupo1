@@ -23,13 +23,23 @@ class RegistroCalculosController extends Controller
     }
 
     public function login(Request $request){
-        $credentials = $request->only('Correo', 'Clave');
+        return view('calculadora.create');
+    }
 
-        if (Auth::attempt($credentials)) {
-        return redirect()->route('calculadora.create');
+    public function calcular(Request $request){
+        $sistema = $request->input("Sistema_Numerico");
+        $operador = $request->input("Operacion");
+        $primerNum = $request->input("Primer_Cadena");
+        $segundoNum = $request->input("Segunda_Cadena");
+        $resultado = 0;
+
+        switch($operador){
+            case "Suma":
+                $resultado = $primerNum+$segundoNum;
+                break;
         }
-        
-        return 'No estas registrado';
+
+        return redirect('/create')->with('info',$resultado);
     }
     
     /**

@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('calculadora.login.login');
 });
 
-Route::post('login', 'App\Http\Controllers\RegistroCalculosController@login')->name("login");
+Route::get('login', 'App\Http\Controllers\RegistroCalculosController@login')->name("login");
 Route::get('register', function(){
     return view('calculadora.login.register');
 });
@@ -14,6 +14,7 @@ Route::post('registerStore', 'App\Http\Controllers\RegistroCalculosController@re
 Route::get('index', 'App\Http\Controllers\RegistroCalculosController@index');
 Route::get('create', 'App\Http\Controllers\RegistroCalculosController@create')->name("create");
 Route::post('store', 'App\Http\Controllers\RegistroCalculosController@store')->name("calc.store");
+Route::post('/calcular', 'App\Http\Controllers\RegistroCalculosController@calcular');
 
 Route::resource('/calculadora', 'App\Http\Controllers\RegistroCalculosController');
 

@@ -1,5 +1,6 @@
 @extends('layouts.plantilla')
 @section('contenido')
+<link rel="stylesheet" href="<?php echo asset('css/app.css')?>" type="text/css">
 <img class="logo" src="<?php echo asset('img/Logo.png')?>">
     <div id="contenedor">
         <div id="central">
