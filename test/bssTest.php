@@ -1,8 +1,4 @@
 <?php
-    //use PHPUnit\Framework\TestCase;
-    //require ('src/bss.php');
-
-<?php
 use PHPUnit\Framework\TestCase;
 require('src/bss.php');
 
@@ -17,22 +13,21 @@ class BssTest extends TestCase
  
     }
 
-    public function testInterpretacion010esIgual12(){
+    public function testRepresentacion100esIgual11110(){
         $bss = new BSS();
-        $this->assertEquals(2, $bss->interpretacion('010'));
+        $this-> assertSame($bss->representacion(100),'1100100');
  
     }
 
-    public function testInterpretacion010esIgualA3(){
+    public function testInterpretacion1010esIgual2(){
         $bss = new BSS();
-        $this->assertEquals(2, $bss->interpretacion('010'));
+        $this->assertEquals(10, $bss->interpretacion('1010'));
  
     }
-
 
     public function testRepresentacion6EsIgualA110(){
         $bss = new BSS();
-        $this->assertEquals(110, $bss->representacion(6));
+        $this->assertSame('110', $bss->representacion(6));
  
     }
 
