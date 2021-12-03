@@ -20,21 +20,18 @@ function complementar($cadena){
     $resultado = suma($cadena, 1); 
     $resultadoFinal=interpretacion($resultado)*-1;
     return $resultadoFinal;
-}
-//echo(complementar('1010'));
+}   
 
 function interpretarCa2($cadena){
 $x = substr($cadena,0,1);
-if ($x==1){
-    $resultado=complementar($cadena);
+    if ($x==1){
+         $resultado=complementar($cadena);
     }
-else {
-    $resultado= interpretacion($cadena);
+    else {
+        $resultado= interpretacion($cadena);
 }
-return $resultado;
+    return $resultado;
 }
-
-//echo(interpretarCa2('0110'));
 
 
 //--------------------------------------------------------------------------------------------------
@@ -56,17 +53,44 @@ function complementar2($cadena){
     $resultado = suma($cadena, 1); 
     $resultadoFinal=representacion($resultado);
     return $resultadoFinal;
-}
+} 
 
 function representarCa2($decimal){
 $resultado= representacion($decimal);
     if ($decimal<0){
-         $resultado=complementar2($resultado);
+         $resultado = complementar2($resultado);
     }
     return $resultado;
 }
 
-echo(representarCa2(6));
+
+
+//--------------------------------------------------------------------------------------------------
+
+function numeroDeBits($nroBits,$cadena){
+    $x =strlen($cadena);
+    if($x>$nroBits){
+        $nuevaCadena=substr($cadena,-$nroBits);
+       return $nuevaCadena;
+    }
+    else{
+        return $cadena;
+    }
+
+}
+function sumaCa2($nroBits,$cadena1,$cadena2){
+ $resultadoSuma=suma($cadena1, $cadena2);
+ $restringirBits =numeroDeBits($nroBits,$resultadoSuma);
+ return $restringirBits;
+
+ }
+
+ function restaCa2($nroBits,$cadena1,$cadena2){
+  $resultadoResta=resta($cadena1,$cadena2);
+  $restringirBits = numeroDeBits($nroBits,$resultadoResta);
+  return $restringirBits;
+ }
+ 
 //--------------------------------------------------------------------------------------------------
 }
 ?>
