@@ -21,7 +21,7 @@
               </form>
                     
                <div class="pie-form">
-                  <a href="/login">¿Ya tienes Cuenta? Ingresa aqui</a>
+                  <a href="/loggin">¿Ya tienes Cuenta? Ingresa aqui</a>
                </div>
                 
             </div>

@@ -3,13 +3,18 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('calculadora.login.login');
-});
+    return view('calculadora.login.loggin');
+})->name("/");
 
-Route::get('login', 'App\Http\Controllers\RegistroCalculosController@login')->name("login");
-Route::get('register', function(){
-    return view('calculadora.login.register');
-});
+Route::get('loggin', function(){
+    return view('calculadora.login.loggin');
+})->name("loggin");
+
+Route::get('/registro', function(){
+    return view('calculadora.login.registro');
+})->name("/registro");
+
+Route::post('/logearse', 'App\Http\Controllers\RegistroCalculosController@logearse');
 Route::post('registerStore', 'App\Http\Controllers\RegistroCalculosController@registerStore')->name("user.store");
 Route::get('index', 'App\Http\Controllers\RegistroCalculosController@index');
 Route::get('create', 'App\Http\Controllers\RegistroCalculosController@create')->name("create");

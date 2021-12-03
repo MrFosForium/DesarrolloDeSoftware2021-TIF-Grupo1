@@ -97,7 +97,7 @@ function restaSM($cadena1,$cadena2){
     $resultado = sumaSM($cadena1,$cadena2);
     echo("\nEl resultado es: ".$resultado);
     return $resultado;
-};
+}
 
 //Rango SM
 function rangoSM($rango){
@@ -111,7 +111,7 @@ function rangoSM($rango){
 
 }
 
-representacionSM(-5);
-rangoSM(3);
+//representacionSM(-5);
+//rangoSM(3);
 
 ?>

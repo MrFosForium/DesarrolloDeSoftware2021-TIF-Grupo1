@@ -1,8 +1,9 @@
 <?php
+namespace App\Scripts;
 include 'bss.php';
 
 class CA2 extends BSS{
-function complementar($cadena){
+public static function complementar($cadena){
     $resultadoFinal=0;
     $resultado=' ' ;
     $longitud = strlen($cadena);
@@ -14,18 +15,18 @@ function complementar($cadena){
         $cadena[$i]='1'; }
     }
     $resultado = suma($cadena, 1); 
-    $resultadoFinal=interpretacion($resultado)*-1;
+    $resultadoFinal=BSS::interpretacion($resultado)*-1;
     return $resultadoFinal;
 }
 //echo(complementar('1010'));
 
-function interpretarCa2($cadena){
+public static function interpretacion($cadena){
 $x = substr($cadena,0,1);
 if ($x==1){
     $resultado=complementar($cadena);
     }
 else {
-    $resultado= interpretacion($cadena);
+    $resultado= BSS::interpretacion($cadena);
 }
 return $resultado;
 }
@@ -34,7 +35,7 @@ return $resultado;
 
 
 //--------------------------------------------------------------------------------------------------
-function complementacion($cadena){
+public static function complementacion($cadena){
 $longitud = strlen($cadena);
     for ($i=($longitud-1);$i>=0;$i--){
         if($cadena[$i]=='1'){
@@ -46,16 +47,16 @@ $longitud = strlen($cadena);
     return $cadena;
 }
 
-function complementar2($cadena){
+public static function complementar2($cadena){
     $resultadoFinal= "";
     $resultado=complementacion($cadena);
     $resultado = suma($cadena, 1); 
-    $resultadoFinal=representacion($resultado);
+    $resultadoFinal=BSS::representacion($resultado);
     return $resultadoFinal;
 }
 
-function representarCa2($decimal){
-$resultado= representacion($decimal);
+public static function representacion($decimal){
+$resultado= BSS::representacion($decimal);
     if ($decimal<0){
          $resultado=complementar2($resultado);
     };

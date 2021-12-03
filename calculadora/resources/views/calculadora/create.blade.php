@@ -9,6 +9,7 @@
       <main>
             <form class="form" action="/calcular" method="post"><br>
                 @csrf
+               <label>
                <select class="select-SN" id="Sistema_Numerico" name="Sistema_Numerico">
                  <option value="" selected="selected">Sistema Numerico </option>
                  <option value="BSS">Binario sin signo</option>
@@ -18,7 +19,8 @@
                  <option value="HEX">Hexadecimal</option>
                  <option value="OCT">Octadecimal</option>
               </select>
-              <input type="number" class="login-input2" id="Cantidad_Digitos" name="Cantidad_Digitos">
+               </label>
+              <input type="number" class="login-input2" id="Cantidad_Digitos" name="Cantidad_Digitos" required>
    
               <select id="Operacion" name="Operacion">
                 <option value="" selected="selected"> Operacion </option>
@@ -28,12 +30,13 @@
                 <option value="Suma">Suma</option>
                 <option value="Resta">Resta</option>
              </select>
-             
-             <input type="text" class="login-input" id="Operando" name="Operando" placeholder="Ingresa el tipo de operando"/>
-             <input type="text" class="login-input" id="Primer_Cadena" name="Primer_Cadena" placeholder="Ingresa la primer cadena"/>
-             <input type="text" class="login-input" id="Segunda_Cadena" name="Segunda_Cadena" placeholder="Ingresa la segunda cadena"/><br>
-             <input class="login-button" type="submit" name="submit"><br>
-             <div style="background: rgb(123, 149, 182); color: black;" type="text" class="login-input" name="Resultado">
+
+             <!-- <input type="text" class="login-input" id="Operando" name="Operando" value='+' disabled/> -->
+
+             <input type="text" class="login-input" id="Primer_Cadena" name="Primer_Cadena" placeholder="Ingresa la primer cadena" required/>
+             <input type="text" class="login-input" id="Segunda_Cadena" name="Segunda_Cadena" placeholder="Ingresa la segunda cadena" required/><br>
+             <input class="boton" type="submit" name="submit"><br>
+             <div type="text" class="login-input3" name="Resultado">
                {{  session('info')  }}
              </div>
            </form><br>
@@ -49,10 +52,4 @@
             </div>
          </section>
      </main>
-     <script src="php/bss.php"></script>
-     <script src="php/Ca2.php"></script>
-     <script src="php/EX.php"></script>
-     <script src="php/hexa.php"></script>
-     <script src="php/octa.php"></script>
-     <script src="php/SM.php"></script>
 @endsection

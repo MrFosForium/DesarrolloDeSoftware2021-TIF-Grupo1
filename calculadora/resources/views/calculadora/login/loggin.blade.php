@@ -8,7 +8,7 @@
                        Iniciar sesion
                     </div>
 
-                    <form action='/create'>
+                    <form action="/logearse" method="post">
                         @csrf
                         <label>
                             <input type="text" class="login-input" name="Correo" placeholder="Ingresa tu correo" required/>
@@ -20,7 +20,7 @@
                     </form>
 
                     <div class="pie-form">
-                        <a href="/register">¿No tienes Cuenta? Registrate</a>
+                        <a href="/registro">¿No tienes Cuenta? Registrate</a>
                     </div>
                 </div>
             </div>

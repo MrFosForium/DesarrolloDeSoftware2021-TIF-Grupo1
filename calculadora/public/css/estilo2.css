@@ -10,6 +10,8 @@ body{
     background: #fff;
 
     margin: 0;
+    background-image: url('../img/eset.jpg');
+
     background-color: #D1D1D1;
 }
 
@@ -145,9 +147,10 @@ header .texto-principal .linea{
 }
 
 main .inf{
-    background: #f0f3f5;
+    background: linear-gradient(#C4C4C4, #A2A2A2);
     padding: 30px 0;
     text-align: center;
+    opacity: 0.9;
 }
 
 main .inf .info h2{
@@ -160,7 +163,7 @@ main .inf .info h2{
 main .inf .info{
     font-size: 30px;
     font-weight: 900;
-    color: #999999;
+    color: #151515;
     margin-bottom: 20px;
 
     flex-wrap: wrap;
@@ -234,20 +237,51 @@ main .inf .info{
     -webkit-border-radius: 3px 3px 3px 3px;
 }
 
-.form .select-SN{
-    margin-left: 60px;
-}
-
 .form .login-input {
     font-family: 'Overpass', sans-serif;
     font-size: 110%;
-    color: #45b828;
+    color: #000000;
     text-align: center;
 
     width: 50%;
     height: 30px;
     
     margin-bottom: 30px;
+    position: relative;
+    
+    box-sizing: border-box;
+    
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.form .select-SN{
+    margin: center;
+    position: relative;
+    left: 33px;
+
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.form .login-input3{
+    background: rgb(123, 149, 182); 
+    color: black;
+
+    font-family: 'Overpass', sans-serif;
+    font-size: 150%;
+    text-align: center;
+
+    width: 50%;
+    height: 30px;
+    
+    margin: auto;
+    margin-bottom: 30px;
+    position: relative;
     
     box-sizing: border-box;
     
@@ -258,14 +292,15 @@ main .inf .info{
 }
 
 .form .login-input2{
-    color: #45b828;
+    color: #000000;
     text-align: center;
-    width: 3%;
+    width: 5%;
     height: 40px;
-    
+
     margin-bottom: 10px;
     padding: 5px 5px 5px 10px;
-    margin-left: 10px;
+    position: relative;
+    left: 39px;
     
     box-sizing: border-box;
     
@@ -285,7 +320,7 @@ main .inf .info{
     font-family: 'Overpass', sans-serif;
     font-size: 110%;
     color:#ffffff;
-    width: 100%;
+    width: 30%;
     height: 40px;
     border: none;
     
@@ -295,7 +330,7 @@ main .inf .info{
     
     background-color: #2b2b2c;
     cursor: pointer;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .boton:hover {
